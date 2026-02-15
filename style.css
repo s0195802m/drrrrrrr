@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* CANVAS КОНФЕТТИ */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999999;
+}
+
+/* ПЕРВЫЙ ЭКРАН */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.bottom-text h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 12px;
+}
+
+.bottom-text p {
+  font-size: clamp(16px, 3.5vw, 18px);
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+.bottom-text button {
+  background: #ff5fa2;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ВТОРОЙ ЭКРАН */
+.content {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #ff7eb3, #ff758c);
+  text-align: center;
+}
+
+.content h2 {
+  font-size: clamp(26px, 5vw, 38px);
+  margin-bottom: 24px;
+}
+
+.content p {
+  font-size: clamp(18px, 4vw, 20px);
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.hearts {
+  margin-top: 40px;
+  font-size: 36px;
+  animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+}
